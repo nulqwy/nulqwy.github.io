@@ -1,5 +1,4 @@
 <script lang="ts">
-	// import { setLocale } from '$lib/paraglide/runtime';
 	import { m } from '$lib/paraglide/messages.js';
 	import LineBreak from '../lib/decorations/LineBreak.svelte';
 	import LinkCard from '../lib/LinkCard.svelte';
@@ -35,9 +34,9 @@
 <LineBreak />
 
 <Section name="info" separator={false}>
-	<Paragraph name="About.">{m.info_about()}</Paragraph>
+	<Paragraph name={m.info_about_title()}>{m.info_about()}</Paragraph>
 
-	<Paragraph name="Hobbies.">{m.info_hobbies()}</Paragraph>
+	<Paragraph name={m.info_hobbies_title()}>{m.info_hobbies()}</Paragraph>
 
-	<Paragraph name="Knowledge.">{@html m.info_knowledge()}</Paragraph>
+	<Paragraph name={m.info_knowledge_title()}>{@html m.info_knowledge()}</Paragraph>
 </Section>

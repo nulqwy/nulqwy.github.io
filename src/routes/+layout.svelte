@@ -25,13 +25,18 @@
 	<footer class="min-h-4 p-5 text-center">
 		<LineBreak><Text>{m.slogan()}</Text></LineBreak>
 		<div class="mx-auto flex justify-center gap-10">
-			<Text>
-				<a data-sveltekit-reload class="hover:underline" href="/"> english </a>
-			</Text>
+			{#snippet localeLink(href: string, locale: string, name: string)}
+				<Text>
+					{#if getLocale() != locale}
+						<a data-sveltekit-reload class="underline hover:italic" {href}>{name}</a>
+					{:else}
+						<span class="font-bold">{name}</span>
+					{/if}
+				</Text>
+			{/snippet}
 
-			<Text>
-				<a data-sveltekit-reload class="hover:underline" href="/uk"> українська </a>
-			</Text>
+			{@render localeLink('/', 'en', 'english')}
+			{@render localeLink('/uk', 'uk', 'українська')}
 		</div>
 	</footer>
 </div>

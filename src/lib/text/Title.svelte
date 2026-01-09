@@ -5,7 +5,7 @@
 </script>
 
 <h1
-	class="text-text dark:text-text-dark major-mono-display-regular stripe-background-accent text-8xl"
+	class="old-standard-tt-bold major-mono-display-regular stripe-background-accent text-8xl text-text dark:text-text-dark"
 >
 	{@render children()}
 </h1>
